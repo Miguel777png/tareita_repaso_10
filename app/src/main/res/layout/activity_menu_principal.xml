@@ -7,4 +7,45 @@
     android:layout_height="match_parent"
     tools:context=".MenuPrincipalActivity">
 
+
+    <Button
+        android:id="@+id/btncatalogo"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginVertical="45dp"
+
+        android:text="catalogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653" />
+
+    <TextView
+        android:id="@+id/txtBienvenida"
+        android:layout_width="269dp"
+        android:layout_height="134dp"
+        android:text="ECOTRUEQUE"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <Button
+        android:id="@+id/btntrueque"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginVertical="45dp"
+
+        android:text="trueque"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

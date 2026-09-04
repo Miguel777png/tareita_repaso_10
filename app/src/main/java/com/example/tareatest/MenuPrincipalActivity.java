@@ -1,6 +1,9 @@
 package com.example.tareatest;
 
+
 import android.os.Bundle;
+import android.widget.Button;
+import android.content.Intent;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +11,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
+
 public class MenuPrincipalActivity extends AppCompatActivity {
+    private Button btntrueque;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +27,32 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+
+        btntrueque = findViewById(R.id.btntrueque);
+        btntrueque.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuPrincipalActivity.this, PublicarObjetoActivity.class);
+            intent.addFlags(intent.FLAG_ACTIVITY_SINGLE_TOP | intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        });
+
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
