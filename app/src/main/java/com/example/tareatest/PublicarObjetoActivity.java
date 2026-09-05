@@ -19,6 +19,7 @@ public class PublicarObjetoActivity extends AppCompatActivity {
 
     private Button btnBack ,button;
 
+
     private EditText txtNombre;
     private RadioGroup GrupoRadio;
     private Integer IdSeleccionado;
@@ -48,6 +49,7 @@ public class PublicarObjetoActivity extends AppCompatActivity {
         });
 
 
+        GrupoRadio = findViewById(R.id.Gruporadio);
 
         button = findViewById(R.id.button);
         button.setOnClickListener(v -> {
@@ -57,6 +59,7 @@ public class PublicarObjetoActivity extends AppCompatActivity {
 
                 txtNombre.setError("El nombre es obligatorio!");
             }
+
 
             IdSeleccionado = GrupoRadio.getCheckedRadioButtonId();
             if(IdSeleccionado != -1){
@@ -77,6 +80,7 @@ public class PublicarObjetoActivity extends AppCompatActivity {
             intentenviado.putExtra("CLAVE_NOMBRE",nombre);
             intentenviado.putExtra("CLAVE_CATEG",categoria);
             startActivity(intentenviado);
+            finish();
 
         });
 
