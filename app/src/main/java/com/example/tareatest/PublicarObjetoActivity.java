@@ -58,9 +58,6 @@ public class PublicarObjetoActivity extends AppCompatActivity {
                 txtNombre.setError("El nombre es obligatorio!");
             }
 
-
-
-
             IdSeleccionado = GrupoRadio.getCheckedRadioButtonId();
             if(IdSeleccionado != -1){
 
@@ -73,6 +70,13 @@ public class PublicarObjetoActivity extends AppCompatActivity {
                 Toast.makeText(this, "Por favor, selecciona una opción de categoria", Toast.LENGTH_SHORT).show();
 
             }
+            Producto nuevoProducto = new Producto(nombre,categoria);
+            System.out.println(nuevoProducto);
+
+            Intent intentenviado = new Intent(PublicarObjetoActivity.this, DetalleObjetoActivity.class);
+            intentenviado.putExtra("CLAVE_NOMBRE",nombre);
+            intentenviado.putExtra("CLAVE_CATEG",categoria);
+            startActivity(intentenviado);
 
         });
 

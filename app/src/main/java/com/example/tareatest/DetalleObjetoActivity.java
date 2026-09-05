@@ -15,6 +15,8 @@ public class DetalleObjetoActivity extends AppCompatActivity {
 
 
     private Button btnBack;
+    private Intent IntentRecibido;
+    private String nombrerecibido,categoria_recibida;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,12 @@ public class DetalleObjetoActivity extends AppCompatActivity {
             startActivity(intent);
 
         });
+
+
+        IntentRecibido = getIntent();
+        nombrerecibido = IntentRecibido.getStringExtra("CLAVE_NOMBRE");
+        categoria_recibida = IntentRecibido.getStringExtra("CLAVE_CATEG");
+
 
     }
 }

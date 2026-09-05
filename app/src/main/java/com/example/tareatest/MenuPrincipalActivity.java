@@ -47,6 +47,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP | intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);
 
+
         });
 
 
