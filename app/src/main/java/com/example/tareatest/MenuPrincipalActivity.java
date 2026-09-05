@@ -34,6 +34,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         btntrueque.setOnClickListener(v -> {
             Intent intent = new Intent(MenuPrincipalActivity.this, PublicarObjetoActivity.class);
             intent.addFlags(intent.FLAG_ACTIVITY_SINGLE_TOP | intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
 
         });
 

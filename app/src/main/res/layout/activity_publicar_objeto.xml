@@ -10,12 +10,55 @@
 
     <EditText
         android:id="@+id/txtNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ej. Camisa, Novela, Smartphone"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
         android:inputType="textCapWords"
+        android:hint="nombre de producto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="255dp"
+        android:layout_height="296dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre">
+
+        <RadioButton
+            android:id="@+id/rbLibros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Libros" />
+
+        <RadioButton
+            android:id="@+id/rbRopa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ropa" />
+
+        <RadioButton
+            android:id="@+id/rbTecno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tecnologia" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
