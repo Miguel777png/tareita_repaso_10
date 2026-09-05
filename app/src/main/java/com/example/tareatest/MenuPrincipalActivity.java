@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 
 public class MenuPrincipalActivity extends AppCompatActivity {
-    private Button btntrueque;
+    private Button btntrueque , btnBuscar;
 
 
     @Override
@@ -34,6 +34,17 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         btntrueque.setOnClickListener(v -> {
             Intent intent = new Intent(MenuPrincipalActivity.this, PublicarObjetoActivity.class);
             intent.addFlags(intent.FLAG_ACTIVITY_SINGLE_TOP | intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+
+        });
+
+
+
+        btnBuscar = findViewById(R.id.btnBuscar);
+        btnBuscar.setOnClickListener(v -> {
+
+            Intent intent = new Intent(MenuPrincipalActivity.this, DetalleObjetoActivity.class);
+            intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP | intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);
 
         });
